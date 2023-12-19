@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.3.final using JasperReports Library version 6.20.3-415f9428cffdb6805c6f85bbb29ebaf18813a2ab  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="252097a0-020b-4f8b-b336-0050aa1432fd">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter Asistencia"/>
+	<parameter name="pfechaHoy" class="java.util.Date"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM asistencia WHERE DATE(fechAsis) = 
+ $P{pfechaHoy} ]]>
+	</queryString>
+	<field name="codiAsis" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="codiAsis"/>
+		<property name="com.jaspersoft.studio.field.label" value="codiAsis"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="asistencia"/>
+	</field>
+	<field name="codiPers" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="codiPers"/>
+		<property name="com.jaspersoft.studio.field.label" value="codiPers"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="asistencia"/>
+	</field>
+	<field name="fechAsis" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechAsis"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechAsis"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="asistencia"/>
+	</field>
+	<field name="horaAsisPers" class="java.sql.Time">
+		<property name="com.jaspersoft.studio.field.name" value="horaAsisPers"/>
+		<property name="com.jaspersoft.studio.field.label" value="horaAsisPers"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="asistencia"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="31" width="100" height="30" uuid="329265f2-b95b-4363-b910-6ecc754f43ec">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3c3d134a-c369-4b1b-a5a5-328907e68d31"/>
+				</reportElement>
+				<text><![CDATA[codiAsis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="30" width="100" height="30" uuid="e525cbd1-98c4-4564-9b15-a9f839188852">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="eafd3968-d815-47f1-9262-16c57e316eca"/>
+				</reportElement>
+				<text><![CDATA[codiPers]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="30" width="100" height="30" uuid="b8d7a7eb-85c0-49d8-be5e-69f64f7646bd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6216fbf4-f9d7-422a-8189-257986f0e99c"/>
+				</reportElement>
+				<text><![CDATA[fechAsis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="31" width="100" height="30" uuid="51f9c088-90cc-4a17-bc15-25745670c8bc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e7e3296-9e7e-4448-9214-ea5cfcc3587b"/>
+				</reportElement>
+				<text><![CDATA[horaAsisPers]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="40" y="0" width="100" height="30" uuid="0d90a18c-1908-477f-88b8-b27341673e05">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3c3d134a-c369-4b1b-a5a5-328907e68d31"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{codiAsis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="0" width="100" height="30" uuid="8dd5c3a1-9c3c-42fa-8d63-b63acc4d4ad0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="eafd3968-d815-47f1-9262-16c57e316eca"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{codiPers}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="0" width="100" height="30" uuid="66de7b4d-bf7c-4b60-9c78-133cc0f9d0d8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6216fbf4-f9d7-422a-8189-257986f0e99c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fechAsis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="100" height="30" uuid="48968774-7d01-4914-80f9-5e230c4e3172">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e7e3296-9e7e-4448-9214-ea5cfcc3587b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{horaAsisPers}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
